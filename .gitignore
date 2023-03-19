@@ -1,2 +1,4 @@
 gdkey.json
 .env
+*.pyc
+__pychache__/
