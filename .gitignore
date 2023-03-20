@@ -2,3 +2,4 @@ gdkey.json
 .env
 *.pyc
 __pychache__/
+.streamlit/

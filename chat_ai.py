@@ -9,16 +9,17 @@ import requests
 import uuid
 import time
 import json
+import streamlit as st
 
 
 load_dotenv()
 
 # Openai set
-openai.api_key = os.getenv('OPENAI_API_KEY')
+openai.api_key = st.secrets.OPENAI_API_KEY # os.getenv('OPENAI_API_KEY')  
 
 # Naver clova set
-clova_ocr_apigw_url = os.getenv('CLOVA_OCR_APIGW_URL')
-clova_ocr_secret_key = os.getenv('CLOVA_OCR_SECRET_KEY')
+clova_ocr_apigw_url = st.secrets.CLOVA_OCR_APIGW_URL #os.getenv('CLOVA_OCR_APIGW_URL')
+clova_ocr_secret_key = st.secrets.CLOVA_OCR_SECRET_KEY #os.getenv('CLOVA_OCR_SECRET_KEY')
 
 # Make model instances
 image_to_text = pipeline("image-to-text", model="nlpconnect/vit-gpt2-image-captioning")
