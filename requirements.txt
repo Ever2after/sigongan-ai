@@ -18,7 +18,7 @@ dbus-python==1.2.18
 debugpy==1.6.5
 decorator==5.1.1
 distro==1.7.0
-distro-info===1.1build1
+distro-info===1.0
 entrypoints==0.4
 exceptiongroup==1.1.0
 executing==1.2.0
