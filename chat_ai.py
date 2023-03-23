@@ -42,12 +42,13 @@ class Sigongan:
         self.class1 = self.sigongan.img0Class(['real photo', 'text based document'])
 
         self.sigongan.initMessage()
-        self.sigongan.appendMessage("system", "너는 시각장애인을 위해 사진에 대해 자세히 설명해주는 도우미야")
-        self.sigongan.appendMessage("user", f"지금부터 {self.data.nickname}가 촬영하고 {self.data.imageTimestamp}에 해설을 의뢰한 사진을 AI가 분석한 정보를 줄게")
-        self.sigongan.appendMessage("user", f"이 사진에 대한 영문 설명은 '{self.caption}'이야.")
-        self.sigongan.appendMessage("user", f"이 사진에 대한 분류는 {['실물 사진', '스크린샷'][self.class1]}이야.")
-        self.sigongan.appendMessage("user", f"이 사진에서 인식된 글자는 '{self.ocr}' 이야.")
-        self.sigongan.appendMessage("user", "지금 주어진 정보만을 활용해 질문에 자세한 답변 부탁해. 과도한 추측은 안돼")
+        self.sigongan.appendMessage("system", f"너는 시각장애인을 위해 사진에 대해 자세히 설명해주는 도우미야\n \
+                                                지금부터 어떤 사진에 대한 정보를 줄테니 잘 기억해\n \
+                                                촬영자: {self.data.nickname}\n해설의뢰시각: {self.data.imageTimestamp}\n \
+                                                AI 묘사: '{self.caption}\n \
+                                                AI 분류: {['실물 사진', '스크린샷'][self.class1]}\n \
+                                                텍스트: '{self.ocr}'\n \
+                                                사진에 대해 주어진 정보만을 기반해서 질문에 자세한 답변 부탁해. 추측은 안돼") 
 
     def answer(self, step, mode, prompt):
         if(step == 0):
