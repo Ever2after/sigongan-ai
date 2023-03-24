@@ -117,7 +117,6 @@ class SigonganAI:
             model = "gpt-3.5-turbo",
             messages = self._messages
         )
-        print(self._messages)
         answer = response.choices[0].message.content.strip()
         self.appendMessage("assistant", answer)
         return answer
