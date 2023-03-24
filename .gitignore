@@ -3,3 +3,4 @@ gdkey.json
 *.pyc
 __pychache__/
 .streamlit/
+.venv

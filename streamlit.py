@@ -1,7 +1,6 @@
 import streamlit as st 
 from streamlit_chat import message
 import pandas as pd
-from chat_ai import *
 
 df = pd.read_csv("data.csv")
 
@@ -10,15 +9,6 @@ if 'generated' not in st.session_state:
 
 if 'past' not in st.session_state:
     st.session_state['past'] = []
-
-if 'step' not in st.session_state:
-    st.session_state['step'] = 0
-
-if 'mode' not in st.session_state:
-    st.session_state['mode'] = 0
-
-if 'sigongan' not in st.session_state:
-    st.session_state['sigongan'] = Sigongan(0)
 
 if 'imageNum' not in st.session_state:
     st.session_state['imageNum'] = 0
