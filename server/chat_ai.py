@@ -33,7 +33,6 @@ class Prompt():
                                                 {description} \
                                                 사진에 대해 주어진 정보만을 기반해서 질문에 자세한 답변 부탁해. 추측은 안돼"
 
-
 class SigonganAI:
     def __init__(self, imageUrl):
         self._imageUrl = imageUrl

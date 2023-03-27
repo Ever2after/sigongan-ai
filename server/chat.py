@@ -15,9 +15,8 @@ chat_messages = Chat.model('Chats', {
     ), description="List of the message", required=True)
 })
 
-
 @Chat.route('/')
-class Chat_init(Resource):
+class Chat_(Resource):
     @Chat.expect(chat_messages)
     def post(self):
         messages = request.json.get('messages')
@@ -25,4 +24,3 @@ class Chat_init(Resource):
         sigongan.initMessage(messages)
         answer = sigongan.getGPT()
         return {"result": answer}
-    
